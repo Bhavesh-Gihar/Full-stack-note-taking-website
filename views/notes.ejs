@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>notes</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="/css/notes.css">
+</head>
+<body>
+    <img class="back-img" src="/img/img_back.jpg">
+    <div class="container">
+        <div>
+            <img class="iosd" src="/img/IOSD.png">
+        </div>
+        <div class="note-UI">
+            <div class="update-box">
+                <div class="find">
+                    <form action="/notes_find" method="post">
+                        <div class="searchbar">
+                            <input class="search" type="text" name="find" placeholder=" Title" autocomplete="none">
+                        </div>
+                        <div class="icons">
+                            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="operations upd">
+                    <form action="/notes_update" method="post">
+                        <input class="title" type="text" name="title" placeholder=" Title" value="<%= title_val %>"
+                            autocomplete="none"><br>
+                        <input class="description" type="text" name="description" placeholder=" Description"
+                            value="<%= desc_val %>"><br><br>
+                        <input type="submit" class="btn add" value="update">
+                    </form>
+                </div>
+            </div>
+            <div class="operations">
+                <h1 class="welcome">Welcome</h1>
+                <form action="/notes_addition" method="post">
+                    <input class="title" type="text" name="title" placeholder=" Title" autocomplete="none"><br>
+                    <input class="description" type="text" name="note" placeholder=" Description"><br><br>
+                    <input type="submit" class="btn add" value="Add">
+                </form>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="share">
+                <h2>Share with others: /<%= user %></h2>
+            </div>
+            <div>
+                <form action="/" method="get">
+                <input type="submit" class="btn add" value="Logout">
+                </form>
+            </div>
+        </div>
+        <div class="notes">
+            <% for (var i=0; i<newListItems.length; i++){ %>
+                <div class="note-container">
+                    <div>
+                        <h5 class="title">
+                            <%= newListItems[i].title %>
+                        </h5>
+                        <p class="note_body">
+                            <%= newListItems[i].description %><br><br>
+                        </p>
+                        <p>
+                            By: <%= newListItems[i].creator %><br><br>
+                                at <%= newListItems[i].time %>, <%= newListItems[i].date %><br><br>
+                                        public: <%= newListItems[i].public %>
+                        </p>
+                    </div>
+                    <div class="icons">
+                        <form action="/notes_delete" method="post">
+                            <button class="btn icon_op" type="submit" name="del" value="<%= newListItems[i].title %>"><i
+                                    class="fa fa-trash"></i></button>
+                        </form>
+                        <form action="/notes_find" method="post">
+                            <button class="btn icon_op" type="submit" name="upd" value="<%= newListItems[i].title %>"><i
+                                    class="fa fa-edit"></i></button>
+                        </form>
+                        <form action="/notes_view" method="post">
+                            <button class="btn icon_op" type="submit" name="view"
+                                value="<%= newListItems[i].title %>"><i class="fa fa-eye"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+</html>
