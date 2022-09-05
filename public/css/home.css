@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+img.note_logo {
+    height: 4rem;
+}
+
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    background-color: #3F72AF;
+    color: #F9F7F7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+
+nav .logo {
+    width: 25%;
+    text-align: center;
+}
+
+nav .menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .menu a {
+    width: 25%;
+    text-decoration: none;
+    color: #F9F7F7;
+    font-weight: bold;
+}
+
+nav .menu a:first-child {
+    color: #F9F7F7;
+}
+
+.container {
+    background-color: #DBE2EF;
+    padding: 3rem;
+    border-radius: 5rem;
+}
+
+h2.title {
+    font-size: 3rem;
+    margin: 1rem;
+    color: #112D4E;
+}
+
+input.input {
+    width: 15rem;
+    padding: 0.3rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    border: hidden;
+    text-align: center;
+}
+
+.submit {
+    width: 75%;
+    height: 33px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: #3F72AF;
+    background-size: 200%;
+    font-size: 1rem;
+    color: #F9F7F7;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F9F7F7;
+}
+
+section h3 {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px #112D4E;
+}
+
+section h1 {
+    margin: 30px 0 20px 0;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px #112D4E;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px #112D4E;
+}
+
+section a {
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+}
+
+section .btnone {
+    background: #F9F7F7;
+    color: #000;
+    border-radius: 5rem;
+}
+
+.btnone:hover {
+    background: #3F72AF;
+    color: #F9F7F7;
+}
+
+section .btntwo {
+    background: #3F72AF;
+    color: #F9F7F7;
+    border-radius: 5rem;
+}
+
+.btntwo:hover {
+    background: white;
+    color: #112D4E;
+}
+
+.change_content:after {
+    content: "";
+    animation: changetext 10s infinite linear;
+    color: #3F72AF;
+}
+
+@keyframes changetext {
+    0% {
+        content: "a developer";
+    }
+
+    50% {
+        content: "a student";
+    }
+
+    100% {
+        content: "an explorer";
+    }
+}
+
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form {
+		width: 290px;
+	}
+
+    .IOSD {
+        width: 100%;
+    }
+
+	.login-content h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+    nav {
+        display: none;
+    }
+
+    .IOSD {
+        width: 100%;
+    }
+
+	.img {
+		display: none;
+	}
+
+	.wave {
+		display: none;
+	}
+
+	.login-content {
+		justify-content: center;
+	}
+}
