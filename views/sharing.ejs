@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>notes</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="/css/notes.css">
+</head>
+<body>
+    <img class="back-img" src="/img/img_back.jpg">
+    <div class="container_sharing">
+        <div>
+            <img src="/img/IOSD.png">
+        </div>
+        <div class="user_share">
+            <h2>Notes of <%= user %></h2>
+        </div>
+        <div class="share">
+            <h2>Share with others: /<%= user %></h2>
+        </div>
+        <div class="notes">
+            <% for (var i=0; i<sharedListItems.length; i++){ %>
+                <div class="note-container">
+                    <div>
+                        <h5 class="title">
+                            <%= sharedListItems[i].title %>
+                        </h5>
+                        <p class="note_body">
+                            <%= sharedListItems[i].description %><br><br>
+                        </p>
+                        <p>
+                            By: <%= sharedListItems[i].creator %><br><br>
+                            at <%= sharedListItems[i].time %>, <%= sharedListItems[i].date %><br><br>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>
