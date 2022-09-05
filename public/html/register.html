@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="back-img" src="/img/img_back.jpg">
+	<header>	
+	<nav>
+		<div class="logo">&copy; BhaveshGihar</div>
+		<div class="menu">
+			<a href="http://nsut.ac.in/">NSUT</a>
+			<a href="http://nsut.iosd.tech/">about</a>
+			<a href="#">contact</a>
+		</div>
+	</nav>
+		<main>
+			<section>
+				<div class="container">
+					<div class="login-content">
+						<form action="/register" method="post" onsubmit="return validate();">
+							<img class="IOSD" src="img/IOSD.png">
+							<h2 class="title">Welcome</h2>
+							<div class="user_info">
+								<div class="div">
+									<input type="text" class="input" id="user_name" name="username" placeholder="username" autocomplete="none">
+								</div>
+								<div class="div">
+									<input type="password" class="input" id="user_pass" name="password" placeholder="password" autocomplete="none">
+								</div>
+							</div>
+							<div class="link">
+								<a href="/login">Already have an ID? Log in!</a><br>
+							</div>	
+							<input type="submit" class="submit" value="SignUp">
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+	</header>
+	<script src="js/index.js"></script>
+</body>
+</html>
