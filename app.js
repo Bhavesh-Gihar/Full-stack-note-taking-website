@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const { urlencoded } = require("body-parser");
 
-mongoose.connect("mongodb+srv://Bhavesh:bhaveshgihar@cluster0.yn8tf5u.mongodb.net/userdb", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/userdb", {useNewUrlParser: true});
 
 const app = express();
 app.use(express.static("public"));
